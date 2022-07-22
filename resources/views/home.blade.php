@@ -33,6 +33,7 @@
                             </span> 
                         </a>
                         <br>
+                        {{-- logout --}}
                         <a class="nav-link px-0 align-middle" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             <img src="img/logout.png" alt="" width="20" class="">  {{ __('Logout') }}
                         </a>
@@ -58,6 +59,7 @@
                     @csrf
                     <div>
                         <div>   
+                            {{-- input postingan --}}
                             <textarea name="text" id="" cols="190" rows="5" placeholder="Apa yang anda pikirkan"></textarea>
                             <a href="#"><img src="img/galerry.png"  alt="" style="width: 2%"></a>
                             <a href="#"><img src="img/file.png"  alt="" style="width: 2%"></a>

@@ -16,6 +16,7 @@
                         </div>
                         
                         <div class="col-md-15">
+                            {{-- input email --}}
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -29,7 +30,7 @@
                             <label for="password" class="">{{ __('Password') }}</label>
 
                         </div>
-                        
+                        {{-- input password --}}
                         <div class="col-md-15">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 

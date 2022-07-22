@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        // mengambil semua data
         $posts = Post::all();
+        // refresh halaman
         return view('posting.create',compact('posts'));
     }
 
@@ -25,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-
+        // refresh halaman
         return view('posting.create');
     }
 
@@ -37,10 +39,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // untuk memvalidasi data hanya bisa input max 250 text
         $validateData = $request->validate([
             'text' => 'required|max:250',
         ]);
+        // masuk data ke database
         $post = Post::create($validateData);
 
         return redirect('posting/create')->with('succes','berhasil');

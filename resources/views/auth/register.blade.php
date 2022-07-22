@@ -16,6 +16,7 @@
                             <label for="name" class="">{{ __('Username') }}</label>
                         </div>
                         <div class="col-md-15">
+                            {{-- masukan username --}}
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -28,6 +29,7 @@
                             <label for="email" class="">{{ __('E-Mail Address') }}</label>
                         </div>                     
                         <div class="col-md-15">
+                            {{-- masukan email --}}
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
@@ -40,6 +42,7 @@
                             <label for="password" class="">{{ __('Password') }}</label>
                         </div>
                         <div class="col-md-15">
+                            {{-- masukan password --}}
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
@@ -53,6 +56,7 @@
                         </div>
                         
                         <div class="col-md-15">
+                            {{-- konfirmasi password --}}
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                             <br>
